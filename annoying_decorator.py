@@ -7,7 +7,6 @@ def annoying_decorator(func):
     def wrapper(*args, **kwargs):
 
         greeting = args[0]
-        print(greeting)
 
         if greeting == "Hi":
             greeting_str = func("Don't use Hi! with me, please!")
@@ -23,34 +22,8 @@ def greetings(greeting):
     return f"{greeting}"
 
 
-# Task 2 - What are you doing?
-
-
-# Implementation of verbose decorator goes here...
-def verbose(func):
-
-    def wrapper(*args, **kwargs):
-
-        if args and kwargs:
-            arguments = args, kwargs
-        elif kwargs:
-            arguments = kwargs
-        else:
-            arguments = args
-
-        return f"{func.__name__} invoked with {arguments} -> {func(*args)}"
-
-    return wrapper
-
-# Your code here
-
-@verbose
-def sum_two(a, b):
-    return a + b
-
-
 if __name__ == '__main__':
 
     greeting = input("How do you want to be greeted? ")
     print(greetings(greeting))
-    print(sum_two(1, 3))
+

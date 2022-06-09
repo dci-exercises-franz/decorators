@@ -1,6 +1,5 @@
-from annoying_decorator import greetings, annoying_decorator
-# Task 2 - What are you doing?
 
+# Task 2 - What are you doing?
 
 # Implementation of verbose decorator goes here...
 def verbose(func):
@@ -26,6 +25,5 @@ def sum_two(a, b):
 
 
 if __name__ == "__main__":
-
 
     print(sum_two(1, 3))
