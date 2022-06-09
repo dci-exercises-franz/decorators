@@ -23,7 +23,12 @@ def verbose(func):
 def sum_two(a, b):
     return a + b
 
+@verbose
+def some_stuff(a, city):
+    return f"The zip code of {city} is {a}"
+
 
 if __name__ == "__main__":
 
-    print(sum_two(1, 3))
+    print(sum_two(1, 8))
+    print(some_stuff(17489, city="Greifswald"))
