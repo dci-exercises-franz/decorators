@@ -1,14 +1,20 @@
+from annoying_decorator import greetings, annoying_decorator
 # Task 2 - What are you doing?
 
 
 # Implementation of verbose decorator goes here...
 def verbose(func):
 
-    def wrapper(*args):
+    def wrapper(*args, **kwargs):
 
-        a = args[0]
-        b = args[1]
-        return f"{func.__name__} invoked with ({a, b}) -> {func(*args)}"
+        if args and kwargs:
+            arguments = args, kwargs
+        elif kwargs:
+            arguments = kwargs
+        else:
+            arguments = args
+
+        return f"{func.__name__} invoked with {arguments} -> {func(*args)}"
 
     return wrapper
 
@@ -20,5 +26,6 @@ def sum_two(a, b):
 
 
 if __name__ == "__main__":
+
 
     print(sum_two(1, 3))
