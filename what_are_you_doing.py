@@ -13,7 +13,7 @@ def verbose(func):
         else:
             arguments = args
 
-        return f"{func.__name__} invoked with {arguments} -> {func(*args)}"
+        return f"{func.__name__} invoked with {arguments} -> {func(*args, **kwargs)}"
 
     return wrapper
 
