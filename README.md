@@ -33,6 +33,8 @@ If greetings return something like hello, the program must print:
 
 Hello!
 Hello, Sir!
+
+
 2. What are you doing?
 Create a decorator that prints the arguments passed to the function and the returned value on the screen. This could be useful for debugging purposes if you want to look at the values handled by a function. You decorate the function you want to expect, and you will have the input and output values from the function printed out on the screen.
 
